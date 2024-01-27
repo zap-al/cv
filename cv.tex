@@ -9,35 +9,27 @@
 \renewcommand{\ULthickness}{0.7pt}%  Change the thickness here
 \renewcommand{\ULdepth}{4.5pt}
 
-\newcommand{\cvsection}[1]{
-  \uline{\textbf{#1}\hfill}\medbreak
-}
-\newcommand{\linkedin}[1]{
-  \href{https://linkedin.com/#1}{linkedin: #1}
-}
-\newcommand{\email}[1]{
-  \href{mailto:#1}{#1}
-}
-\newcommand{\cvcertificate}[4]{
-  \begin{parcolumns}{2}
-    \colchunk{\raggedright \textbf{#1} -- \textit{#2}}
-    \colchunk{\centering #3}
-  \end{parcolumns}
-  \raggedright{Certificate link: \href{#4}{#4}}
-}
+\newcommand{\cvsection}[1]{\uline{\textbf{#1}\hfill}\medbreak}
+\newcommand{\linkedin}[1]{\href{https://linkedin.com/#1}{linkedin.com/in/#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
 
+\newcommand{\cvitemsep}{\itemsep -0.5em}
+\newcommand{\cvexpspace}{\vspace{-0.7em}}
 
 \setlength{\parindent}{0cm}
 
 \begin{document}
 
-\begin{parcolumns}{3}
+\begin{parcolumns}[colwidths={1=0.2\textwidth,2=0.6\textwidth}]{3}
   \colchunk{\raggedright
-    \href{tel:48451246926}{tel: +48 (451) 246 926}\\
-    \linkedin{zap-al}
+    \href{Poland, Warsaw}{Poland, Warsaw}
+    \linkedin{zap-al}\\
+    \href{tel:48451246926}{+48 (451) 246 926}\\
   }
   \colchunk{\centering
+    \huge
     \textbf{Aliaksandr Zaparozhtsau}\\
+    \normalsize
     \email{aliaksandr.zaparozhtsau@gmail.com}
   }
   \colchunk{}
@@ -45,26 +37,16 @@
 
 \hfill
 
-\cvsection{Education/Certifications}
-
-\cvcertificate{B2 Language School}
-              {Streamline Language School}
-              {Sep -- 2020}
-              {https://vk.com}
-
-\medbreak
-
-\cvcertificate{Azure Fundamentals}
-              {Microsoft}
-              {Dec -- 2023}
-              {https://learn.microsoft.com/en-us/users/zap-al/credentials/5e0fd997b5b52855}
+\input{parts/education.tex}
 
 \hfill
 
 \cvsection{Professional Experience}
 
+\input{parts/experience.tex}
+
 \hfill
 
-\cvsection{Skills/Interests}
+\input{parts/skills.tex}
 
 \end{document}
