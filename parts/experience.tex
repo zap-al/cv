@@ -1,9 +1,27 @@
 \newcommand{\expheader}[5]{
-  \begin{parcolumns}[colwidths={1=0.8\textwidth,2=0.2\textwidth}]{2}
+  \large
+  \begin{parcolumns}[colwidths={1=0.7\textwidth}]{2}
     \colchunk{\raggedright \textbf{#1} -- \textit{#2} -- #3}
     \colchunk{\raggedleft \textit{#4} -- \textit{#5}}
   \end{parcolumns}
+  \normalsize
 }
+
+\expheader{\href{https://capgemini.com/}{Capgemini}}
+          {Senior Data Engineer}
+          {Poland}
+          {Aug 2023}
+          {Present}
+
+\textbf{Data Processing}
+\cvexpspace
+\begin{itemize}
+  \cvitemsep
+  \item Codegeneration for Azure Databricks using Python and Jinja2
+  \item Data processing using Apache Spark
+  \item Implementing Azure Pipelines for orchestration of processing
+  \item Implementing Azure Data factory pipelines for data processing
+\end{itemize}
 
 \expheader{\href{https://nufa.ai/}{Mimesis Inc}}
           {Senior Data Engineer \& Co-Founder}
