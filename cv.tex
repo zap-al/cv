@@ -11,7 +11,8 @@
 \renewcommand{\ULthickness}{0.7pt}%  Change the thickness here
 \renewcommand{\ULdepth}{4.5pt}
 
-\newcommand{\cvsection}[1]{\uline{\textbf{#1}\hfill}\medbreak}
+\newcommand{\cvsection}[1]{\uline{\textbf{\Large{#1}}\hfill}\medbreak}
+
 \newcommand{\linkedin}[1]{\href{https://linkedin.com/#1}{linkedin.com/in/#1}}
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 
@@ -23,30 +24,24 @@
 
 \begin{document}
 
-\begin{parcolumns}[colwidths={1=0.2\textwidth,2=0.6\textwidth}]{3}
-  \colchunk{\raggedright
-    \href{Poland, Warsaw}{Poland, Warsaw}
-    \linkedin{zap-al}\\
-    \href{tel:48451246926}{+48 (451) 246 926}\\
-  }
-  \colchunk{\centering
-    \huge
-    \textbf{Aliaksandr Zaparozhtsau}\\
-    \normalsize
-    \email{aliaksandr.zaparozhtsau@gmail.com}
-  }
-  \colchunk{}
-\end{parcolumns}
+\begin{center}
+  \huge\textbf{Aliaksandr Zaparozhtsau}\\
+  \normalsize
+  \email{aliaksandr.zaparozhtsau@gmail.com}\\
+  \href{Poland, Warsaw}{Poland, Warsaw}
+  | \linkedin{zap-al}
+  | \href{tel:48451246926}{+48 (451) 246 926}\\
+\end{center}
+
+\input{parts/objective.tex}
+
+\hfill
+
+\input{parts/experience.tex}
 
 \hfill
 
 \input{parts/education.tex}
-
-\hfill
-
-\cvsection{Professional Experience}
-
-\input{parts/experience.tex}
 
 \hfill
 
